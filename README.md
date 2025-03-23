@@ -7,7 +7,7 @@ The Online Pharmacy Platform is a modern, intuitive, and fully responsive e-comm
 Frontend
 
 ## Deployed App
-Frontend: [https://deployed-site.whatever](https://rahul17-medicalapp.netlify.app/)
+Frontend: [MedicalApp](https://rahul17-medicalapp.netlify.app/)
 
 ## Directory Structure
 ```
