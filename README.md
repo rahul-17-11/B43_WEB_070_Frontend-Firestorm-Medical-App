@@ -22,10 +22,7 @@ my-app/
 ```
 
 ## Video Walkthrough of the Project
-[Attach a 1-3 minute walkthrough video showcasing the platform’s features.]
-
-## Video Walkthrough of the Codebase
-[Attach a 1-5 minute walkthrough video explaining the project structure and code implementation.]
+[Video]()
 
 ## Features
 - **Searchable Medicine Catalog** with real-time search and advanced filtering.
