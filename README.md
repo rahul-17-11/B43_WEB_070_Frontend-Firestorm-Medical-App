@@ -46,11 +46,11 @@ my-app/
 ## Installation & Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/online-pharmacy.git
+   git clone https://github.com/rahul-17-11/B43_WEB_070_Frontend-Firestorm-Medical-App
    ```
 2. Navigate to the project folder:
    ```bash
-   cd online-pharmacy
+   cd project
    ```
 3. Install dependencies:
    ```bash
@@ -71,7 +71,6 @@ my-app/
 
 ## Credentials
 Provide test user credentials:
-- **Admin**: `admin@example.com / password123`
 - **User**: `user@example.com / userpass456`
 
 ## APIs Used
