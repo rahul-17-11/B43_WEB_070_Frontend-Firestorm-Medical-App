@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingCart, X, Plus, Minus, Trash2 } from 'lucide-react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { removeFromCart, updateQuantity } from '../store/slices/cartSlice';
+import { motion, AnimatePresence } from "framer-motion";
+import { ShoppingCart, X, Plus, Minus, Trash2 } from "lucide-react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../store";
+import { removeFromCart, updateQuantity } from "../store/slices/cartSlice";
 
 interface CartProps {
   isOpen: boolean;
@@ -15,7 +14,10 @@ export function Cart({ isOpen, onClose }: CartProps) {
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const medicines = useSelector((state: RootState) => state.medicines.items);
 
-  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   return (
     <AnimatePresence>
@@ -29,9 +31,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
             className="fixed inset-0 bg-black"
           />
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: "100%" }}
             className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-xl"
           >
             <div className="p-4 flex items-center justify-between border-b">
@@ -55,7 +57,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
               ) : (
                 <div className="space-y-4">
                   {cartItems.map((item) => {
-                    const medicine = medicines.find((m) => m.id === item.medicineId);
+                    const medicine = medicines.find(
+                      (m) => m.id === item.medicineId
+                    );
                     if (!medicine) return null;
 
                     return (
@@ -88,7 +92,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
                           >
                             <Minus className="w-4 h-4" />
                           </button>
-                          <span className="w-8 text-center">{item.quantity}</span>
+                          <span className="w-8 text-center">
+                            {item.quantity}
+                          </span>
                           <button
                             onClick={() =>
                               dispatch(
@@ -127,8 +133,8 @@ export function Cart({ isOpen, onClose }: CartProps) {
                 disabled={cartItems.length === 0}
                 className={`w-full py-3 rounded-lg ${
                   cartItems.length === 0
-                    ? 'bg-gray-300 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700'
+                    ? "bg-gray-300 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-700"
                 } text-white font-semibold transition-colors`}
               >
                 Proceed to Checkout

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingCart, AlertCircle } from 'lucide-react';
 import { Medicine } from '../types';

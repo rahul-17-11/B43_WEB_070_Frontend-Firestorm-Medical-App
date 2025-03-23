@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { motion } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { motion } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   ShoppingCart,
   Pill,
@@ -13,9 +13,9 @@ import {
   Bell,
   Menu,
   X,
-} from 'lucide-react';
-import { logout } from '../store/slices/authSlice';
-import { ThemeToggle } from './ThemeToggle';
+} from "lucide-react";
+import { logout } from "../store/slices/authSlice";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -32,10 +32,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const navItems = [
-    { icon: Home, label: 'Dashboard', path: '/dashboard' },
-    { icon: Package, label: 'Orders', path: '/orders' },
-    { icon: FileText, label: 'Prescriptions', path: '/prescriptions' },
-    { icon: Settings, label: 'Settings', path: '/settings' },
+    { icon: Home, label: "Dashboard", path: "/dashboard" },
+    { icon: Package, label: "Orders", path: "/orders" },
+    { icon: FileText, label: "Prescriptions", path: "/prescriptions" },
+    { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   return (
@@ -45,16 +45,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         initial={{ x: -300 }}
         animate={{ x: 0 }}
         className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-800 shadow-lg transform lg:relative lg:translate-x-0 transition-transform duration-200 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="h-full flex flex-col">
           <div className="flex items-center space-x-2 px-6 py-4 border-b dark:border-gray-700">
             <div className="relative">
-              <ShoppingCart className="h-8 w-8 text-blue-600" />
-              <Pill className="h-6 w-6 absolute -right-1 -bottom-1 text-blue-600" />
+              <img src="/logo.png" alt="logo" className="w-12 h-12" />
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white">MedicalApp</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">
+              MedicalApp
+            </span>
           </div>
 
           <nav className="flex-1 px-4 py-6 space-y-1">
@@ -64,8 +65,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 onClick={() => navigate(item.path)}
                 className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg transition-colors ${
                   location.pathname === item.path
-                    ? 'bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400'
-                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ? "bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                 }`}
               >
                 <item.icon className="w-5 h-5" />

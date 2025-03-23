@@ -1,8 +1,7 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { MedicineCard } from './MedicineCard';
-import { RootState } from '../store';
-import { Medicine } from '../types';
+import { useSelector } from "react-redux";
+import { MedicineCard } from "./MedicineCard";
+import { RootState } from "../store";
+import { Medicine } from "../types";
 
 interface MedicineListProps {
   onAddToCart: (medicine: Medicine) => void;
